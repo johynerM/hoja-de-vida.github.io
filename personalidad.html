@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Mi Hoja de vida Web </title>
+</head>
+<body>
+    <!-- El menu que va en todas las paginas -->
+     <div class="portafolio">
+        <header class="encabezado"> 
+            <img class="encabezado__foto" src="img/foto_perfil.jfif" alt="imagen de perfil" width="200" height="200">
+            <h1 class="encabezado__titulo">Johyner Martinez </h1>
+            <p class="encabezado__certificado"> Desarrollador Junior Full Stack </p>
+            <p class="encabezado__pais">Santander-Colombia</p>
+        </header>
+        <img class="banner" src="img/banner_personal.png" alt="banner principal" width="1200" height="200">
+        <nav class="menu" aria-label="Menu principal">
+            <ul class="menu__lista">
+                <li><a class="menu__enlace" href="index.html">Inicio</a></li>
+                <li><a class="menu__enlace" href="proyectos.html"> Proyectos </a> </li>
+                <li><a class="menu__enlace menu__enlace--activo" href="personalidad.html">Más sobre mí</a> </li>
+            </ul>
+        </nav>
+        <main class="principal">
+            
+    <!-- Seccion de datos -->
+            <section class="sobre-mi" id="sobre-mi">
+                <h2 class="seccion__titulo"> Eyy <span class="saludo__emoji">👋 </span> estas son algunas cositas interesantes de mi </h2>
+                <p class="texto"> aqui algunas cosas que hacen parte de mi persona </p>
+                <div class="cajita-grid">
+                    <article class="cajita-grid__tarjeta">
+                        <span class="cajita-grid__icono">🎮🕹</span>
+                        <h3 class="cajita-grid__titulo"> Videojuegos</h3>
+                        <p class="cajita-grid__descripcion"> tengo un gusto por los juegos indies y con una historia bien implementada, una de mis metas es tambien desarrollar un videojuego propio </p>
+                    </article>
+                    <article class="cajita-grid__tarjeta">
+                        <span class="cajita-grid__icono">😜🧠</span>
+                        <h3 class="cajita-grid__titulo"> Pensamiento distinto</h3>
+                        <p class="cajita-grid__descripcion"> Tiendo a pensar de una forma diferente, no solo en el codigo tambien en la vida. </p>
+                    </article>
+                    <article class="cajita-grid__tarjeta">
+                        <span class="cajita-grid__icono">🏐🏓</span>
+                        <h3 class="cajita-grid__titulo"> Deportes</h3>
+                        <p class="cajita-grid__descripcion"> Soy bueno para los deportes, pero especialmente me destaco en el voleyball y el ping pong que tambien disfruto mucho jugandolo con mis amigos, soy competitivo pero tambien no desespero en las partidas </p>
+                    </article>
+    <!-- Seccion de algunas funciones divertidas hechas con el css y el js proximamente -->
+                    <section class="curiosidades" id="curiosidades">
+                        <h2 class="seccion__titulo">clickea para ver algo interesante</h2>
+                        <p class="texto"> ⚠ seccion en construccion por conocimientos tecnicos ⚠</p>
+                        <div class="cajita-grid">
+                            <div class="dato" tabindex="0">
+                                <div class="dato__interior">
+                                    <div class="dato__cara">
+                                        <span class="dato__icono"> 🟡🟢 </span>
+                                        <h3 class="dato__titulo"> mini animación </h3>
+                                        <p class="dato__pista"> 💨 toca para voltear ➰ </p>
+                                    </div>
+                                    <p class="dato__texto"> Una pequeña animacion hecha solo con CSS 😝 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cajita-grid">
+                            <h2 class="cajita-grid__titulo"> Esperando por mas ideas y conocimientos divertidos</h2>                             
+                        </div>
+                    </section>
+                </div>
+            </section>
+    <!-- linea del tiempo de mi progreso personal en la programacion -->
+            <section class="ruta" id="ruta">
+                <h2 class="seccion__titulo"> Mi historia de aprendizaje </h2>
+                <ol class="linea-tiempo">
+                    <li class="linea-tiempo__item">
+                        <span class="linea-tiempo__paso"> Primer vistazo </span>
+                        Ingrese a un bootcamp intensivo para dar el primer paso en la programación
+                    </li>
+                    <li class="linea-tiempo__item">
+                        <span class="linea-tiempo__paso"> Pequeños grandes pasos</span>
+                        Aprendi la logica con PSeint 
+                    </li>
+                    <li class="linea-tiempo__item">
+                        <span class="linea-tiempo__paso"> Logica aplicada</span>
+                        Utilice codigo de Python en mini proyectos 
+                    </li>
+                    <li class="linea-tiempo__item">
+                        <span class="linea-tiempo__paso"> Trabajo en equipo</span>
+                        Domine las mecanicas de Github para el control de versiones y tambien de las metodologias agiles como SCRUM
+                    </li>
+                    <li class="linea-tiempo__item">
+                        <span class="linea-tiempo__paso"> Paginas web </span>
+                        Use HTML5 y CSS para crear paginas con objetivos reales
+                    </li>
+                    <li class="linea-tiempo__item">
+                        <span class="linea-tiempo__paso"> Actualidad </span>
+                        Aprendiendo con cada oportunidad que se me presenta
+                    </li>
+                </ol>
+            </section>
+        </main>
+        <footer class="pie"> 
+            <p class="pie__texto"><a class="pie__enlace" href="https://github.com/johynerM" target="_blank"> GITHUB 🐱‍👤</a></p>
+        </footer>
+    </div>
+</body>
+</html>

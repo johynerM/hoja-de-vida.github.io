@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Mi Hoja de vida Web </title>
+</head>
+<body>
+    <!-- El menu que va en todas las paginas -->
+     <div class="portafolio">
+        <header class="encabezado"> 
+            <img class="encabezado__foto" src="img/foto_perfil.jfif" alt="imagen de perfil" width="200" height="200">
+            <h1 class="encabezado__titulo">Johyner Martinez </h1>
+            <p class="encabezado__certificado"> Desarrollador Junior Full Stack </p>
+            <p class="encabezado__pais">Santander-Colombia</p>
+        </header>
+        <img class="banner" src="img/banner_proyectos.jpg" alt="banner principal" width="1200" height="200">
+
+        <nav class="menu" aria-label="Menu principal">
+            <ul class="menu__lista">
+                <li><a class="menu__enlace " href="index.html">Inicio</a></li>
+                <li><a class="menu__enlace menu__enlace--activo" href="proyectos.html"> Proyectos </a> </li>
+                <li><a class="menu__enlace" href="personalidad.html">Más sobre mí</a> </li>
+            </ul>
+        </nav>
+        <main class="principal">
+            <section class="proyectos" id="proyectos">
+                <h2 class="seccion__titulo"> Mis Proyectos  </h2>
+                <p class="texto"> Estos son los trabajos que he estado realizando durante el ultimo año, cada uno tiene un enfoque distinto e igualmente evidencia diferentes habilidades tecnicas </p>
+                <div class="cajita-grid">
+                    <article class="cajita-grid__tarjeta">
+                        <span class="cajita-grid__icono">🌚🌝</span>
+                        <h3 class="cajita-grid__titulo">LaCueva</h3>
+                        <p class="cajita-grid__descripcion"> Pagina web para un alquiler de consolas con diseño responsivo usando unicamente HTML + CSS </p>
+                        <ul class="etiquetas">
+                            <li class="etiqueta"> HTML5 </li>
+                            <li class="etiqueta"> CSS </li>
+                            <li class="etiqueta"> Responsivo </li>
+                            <li class="etiqueta"> Interactiva </li>
+                        </ul>
+    <!-- ¡¡RECODAR!! Agregar el link de la pagina de la cueva cuando ya este publicada -->
+                         <p class="cajita-grid__enlaces"> <a class="enlace" href="https://johynerm.github.io/" target="_blank">Ingresa a LaCueva sin miedo😉</a> </p>
+                    </article>
+    <!-- Gymnasio -->
+                    <article class="cajita-grid__tarjeta">
+                        <span class="cajita-grid__icono">🏋️‍♂️🤸‍♂️</span>
+                        <h3 class="cajita-grid__titulo"> Gymnasio ForceTech </h3>
+                        <p class="cajita-grid__descripcion"> Este programa se desarrollo para gestionar la administracion de servicios para clientes y administradores del gymnasio</p>
+                        <ul class="etiquetas">
+                            <li class="etiqueta"> PYTHON </li>
+                            <li class="etiqueta"> Lógica </li>
+                            <li class="etiqueta"> Didáctico </li>
+                        </ul>
+                        <p class="cajita-grid__enlaces"> <a class="enlace" href="https://github.com/johynerM/Proyecto_SCRUM_MartinezJohynerRojasSantiagoOrtisCamiloReyesMariana.git" target="_blank">Link del Repo del GYM</a> </p>
+                    </article>
+    <!-- Horario -->
+                    <article class="cajita-grid__tarjeta">
+                        <span class="cajita-grid__icono">📅🔟</span>
+                        <h3 class="cajita-grid__titulo"> Organizador de Horario Semanal </h3>
+                        <p class="cajita-grid__descripcion"> Programa que sirve para organizar un horario de cualquier persona semanalmente y genera reportes del mismo</p>
+                        <ul class="etiquetas">
+                            <li class="etiqueta"> PYTHON </li>
+                            <li class="etiqueta"> Lógica </li>
+                            <li class="etiqueta"> Automatizacion </li>
+                        </ul>
+                        <p class="cajita-grid__enlaces"> <a class="enlace" href="https://github.com/johynerM/Proyecto_Python_MartinezJohyner.git" target="_blank">Link del repositorio del programa</a> </p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="pie"> 
+            <p class="pie__texto"><a class="pie__enlace" href="https://github.com/johynerM" target="_blank"> GITHUB 🐱‍👤</a></p>
+        </footer>
+        </div>
+    </body>
+</html>

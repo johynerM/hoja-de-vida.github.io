@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Mi Hoja de vida Web </title>
+</head>
+<body>
+    <!-- Encabezado de la pagina -->
+    <div class="portafolio">
+        <header class="encabezado"> 
+            <img class="encabezado__foto" src="img/foto_perfil.jfif" alt="imagen de perfil" width="200" height="200">
+            <h1 class="encabezado__titulo">Johyner Martinez </h1>
+            <p class="encabezado__certificado"> Desarrollador Junior Full Stack </p>
+            <p class="encabezado__pais">Santander-Colombia</p>
+        </header>
+        <img class="banner" src="img/banner.jpg" alt="banner principal" width="1200" height="200">
+    <!-- R8 el requisito del menu que se debe ver igual en todas las paginas -->
+        <nav class="menu" aria-label="Menu principal">
+            <ul class="menu__lista">
+                <li><a class="menu__enlace menu__enlace--activo" href="index.html">Inicio</a></li>
+                <li><a class="menu__enlace" href="proyectos.html"> Proyectos </a> </li>
+                <li><a class="menu__enlace" href="personalidad.html">Más sobre mí</a> </li>
+            </ul>
+        </nav>
+    <!-- Contenedor principal del index -->
+        <main class="principal">
+            
+            <section class="perfil" id="perfil">
+                <h2 class="seccion__titulo"> Mi Perfil </h2>
+                <div class="perfil__descripcion"> 
+                    <p> Desarrollador Full Stack de 20 años con conocimientos especializados en desarrollo de paginas web y sistemas de automatización. Siempre dispuesto a aceptar nuevos retos y ejecutarlos con la mayor eficiencia posible.</p>
+                </div>
+            </section>
+            <section class="skills" id="skills">
+                <h2 class="seccion__titulo"> Mis Habilidades</h2>
+                <div class="cajita-grid">
+                    <article class="cajita-grid__tarjeta">
+                            <h3 class="cajita-grid__titulo"> Hard skills </h3>
+                            <p class="cajita-grid__descripcion"> Html5, CSS, Python, Github, PSeint </p>
+                        </article>
+                        <article class="cajita-grid__tarjeta">
+                            <h3 class="cajita-grid__titulo"> Soft skills </h3>
+                            <p class="cajita-grid__descripcion"> Resolucion de problemas, Logica, Negociante, Aprendizaje Agil</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="contactame" id="contactame">
+                    <h2 class="seccion__titulo"> Contactos y Redes </h2>
+                    <p class="contactame__descripcion"> ¿Te interesa lo que ves? Contactame por los siguientes medios y conversemos </p>
+                    <div class="cajita-grid contactame__redes">
+                        <article class="cajita-grid__tarjeta">
+                            <span class="cajita-grid__emoji contactame__icono"> 💬🟢 </span>
+                            <h3 class="cajita-grid__titulo"> WHATSAPP </h3>
+                            <p class="cajita-grid__descripcion"> Escribeme al numero de negocios </p>
+                            <p class="cajita-grid__enlaces contactame__accion"><a class="enlace" href="https://wa.me/57XXXXXXXXXX?text=Hola%20Johyner%2C%20vi%20tu%20hoja%20de%20vida%20web" target="_blank" rel="noopener">Inicia el chat aquí</a></p>
+                        </article>
+                        <article class="cajita-grid__tarjeta">
+                            <span class="cajita-grid__emoji contactame__icono"> 🔴🟣 </span>
+                            <h3 class="cajita-grid__titulo"> INSTAGRAM </h3>
+                            <p class="cajita-grid__descripcion"> Contenido relacionado con proyectos </p>
+                            <p class="cajita-grid__enlaces contactame__accion"><a class="enlace" href="https://www.instagram.com/" target="_blank" rel="noopener">Revisa el perfil aqui</a></p>
+                        </article>
+                    </div>
+                    <h3 class="contactame__subtitulo"> Tambien puedes mandarme un mensaje desde aquí </h3>
+                    <form class="contactame__formulario" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="post">
+                        <div class="contactame__campo">
+                            <label class="contactame__etiqueta" for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="contactame__input" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="contactame__campo">
+                            <label class="contactame__etiqueta" for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="email" class="contactame__input" placeholder="tucorreo@gmail.com" required>
+                        </div>
+                        <div class="contactame__campo">
+                            <label class="contactame__etiqueta" for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" class="contactame__textarea" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="contactame__boton">Enviar mensaje</button></form>
+            </section>
+        </main>
+        <footer class="pie"> 
+            <p class="pie__texto"><a class="pie__enlace" href="https://github.com/johynerM" target="_blank"> GITHUB 🐱‍👤</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,550 @@
+:root{
+    --bg-color: #352e31;            /* Fondo oscuro cálido */
+    --tarjeta-bg: #151815;             /* Fondo de tarjetas */
+    --borde-tarjeta: #2a2428;         /* Borde sutil */
+    --accent-gold: #ffb020;
+    --orito: #e9b048;         /* Ámbar / Oro cálido */
+    --text-primary: #f5f0eb;        /* Color del texto principal */
+    --text-secondary: #a0959d;      /* Color del texto secundario */
+    --font-main: system-ui, -apple-system, sans-serif;
+}
+/* R2 Pagina diseñada con la idea de MobileFirst*/
+body{
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* R7 la imagen no se desbordara con esto */
+img {
+    max-width: 100%;
+    height: auto;
+}
+.encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+.encabezado__foto{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-gold);
+    box-shadow: 0 0 20px rgba(255, 176, 32, 0.3);
+}
+.banner{
+    display: block;
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    border: 1px solid var(--borde-tarjeta);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+}
+/* R4 y R6 uso de grid templates con unidades relativas*/
+.portafolio {
+    max-width: 62rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "encabezado"
+        "banner"
+        "menu"
+        "principal"
+        "pie";
+}
+.encabezado { grid-area: encabezado; }
+.banner    {grid-area: banner;}
+.menu      { grid-area: menu; }
+.principal { grid-area: principal; }
+.pie       { grid-area: pie; }
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+/* Todos los detalles del encabezado */
+.encabezado__titulo {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--accent-gold);
+}
+.encabezado__certificado {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0.3rem 0 0;
+}
+.encabezado__pais {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Estilizacion del R8  (el menu)*/
+
+.menu__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu__enlace {
+    display: block;
+    padding: 0.7rem 1rem;
+    border-radius: 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menu__enlace:hover,
+.menu__enlace:focus-visible,
+.menu__enlace--activo {
+    background-color: var(--accent-gold);
+    color: #0f0d0e;
+    outline: none;
+}
+
+/* Estilizacion de mi Perfil */
+
+.seccion__titulo {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    margin: 0 0 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--borde-tarjeta);
+    text-align: center;
+}
+
+.perfil__descripcion {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    border-radius: 1.2rem;
+    border-left: 3px solid var(--accent-gold);
+}
+
+.perfil__descripcion p {
+    margin: 0;
+}
+
+/* R5 La vista de las tarjetas automatica*/
+.cajita-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 1rem;
+}
+.cajita-grid__tarjeta {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--borde-tarjeta);
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    border-left: 3px solid var(--accent-gold);
+    transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+.cajita-grid__titulo {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    margin: 0 0 0.6rem;
+    text-align: center;
+}
+.cajita-grid__descripcion {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Estilizacion de contactame en el index */
+
+.contactame__descripcion{
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem;
+    text-align: center;
+}
+
+.contactame__redes{
+    margin-bottom: 2rem;
+}
+.contactame__icono{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.contactame__accion{
+    text-align: center;
+}
+.contactame__subtitulo{
+    margin: 0 0 1.2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--borde-tarjeta);
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    text-align: center;
+}
+/* Formulario de envio de mensaje */
+.contactame__formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.contactame__campo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.contactame__etiqueta {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+.contactame__input,
+.contactame__textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--borde-tarjeta);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 1rem;
+    padding: 0.9rem 1rem;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contactame__textarea {
+    resize: vertical;
+    min-height: 8rem;
+}
+.contactame__input:focus,
+.contactame__textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 10px rgba(255, 176, 32, 0.25);
+}
+.contactame__boton {
+    width: 100%;
+    background-color: var(--accent-gold);
+    color: #0f0d0e;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.contactame__boton:hover,
+.contactame__boton:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 176, 32, 0.3);
+    outline: none;
+}
+
+/* Pie de pagina */
+.pie__texto {
+    margin: 0.2rem 0;
+}
+ 
+.pie__enlace {
+    color: var(--accent-gold);
+}
+ 
+.pie__enlace:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 3px;
+}
+
+/* introduccion de las secciones */
+
+.texto {
+    color: var(--text-secondary);
+    margin: 0 0 1.2rem;
+}
+
+/* Emojis, etiquetas, enlaces de las tarjetitas */
+
+.cajita-grid__emoji {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+ 
+.etiquetas {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.8rem 0 0;
+    padding: 0;
+}
+ 
+.etiqueta {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 1rem;
+    border: 1px solid var(--accent-gold);
+    background-color: rgba(163, 126, 55, 0.12);
+    color: var(--accent-gold);
+}
+ 
+.cajita-grid__enlaces {
+    margin: 1rem 0 0;
+}
+ 
+.enlace {
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+ 
+.enlace:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 3px;
+}
+
+/* animacion del saludo en la pagina personalidad*/
+
+.saludo__emoji {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: saludar 2.5s ease-in-out infinite;
+}
+
+@keyframes saludar {
+    0%, 60%, 100% { transform: rotate(0deg); }
+    10%, 30%      { transform: rotate(14deg); }
+    20%           { transform: rotate(-8deg); }
+    40%           { transform: rotate(-4deg); }
+    50%           { transform: rotate(10deg); }
+}
+
+/* Aparicion progresiva de las secciones */
+.principal > section {
+    animation: aparecer 0.6s ease both;
+}
+ 
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(1rem); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+ 
+/* tarjetas curiosas */
+
+.dato {
+    perspective: 1000px;
+    height: 11rem;
+    cursor: pointer;
+    border-radius: 1.2rem;
+}
+ 
+.dato:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 4px;
+}
+ 
+.dato__interior {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+ 
+.dato:hover .dato__interior,
+.dato:focus .dato__interior {
+    transform: rotateY(360deg);
+}
+ 
+.dato__cara,
+.dato__reverso {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--borde-tarjeta);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-left: 3px solid var(--accent-gold);
+}
+ 
+.dato__cara {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+ 
+.dato__reverso {
+    background-color: var(--accent-gold);
+    color: #0f0d0e;
+    transform: rotateY(180deg);
+}
+ 
+.dato__icono {
+    justify-content: right;
+    font-size: 1.5rem;
+}
+ 
+.dato__titulo {
+    margin: 0.3rem 0 0;
+    color: var(--accent-gold);
+    font-size: 1.3rem;
+}
+ 
+.dato__pista {
+    margin: 0.3rem 0 0;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+ 
+.dato__texto {
+    margin: 0px;
+    padding: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Linea de tiempo */
+
+.linea-tiempo {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 2px solid var(--accent-gold);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+ 
+.linea-tiempo__item {
+    position: relative;
+}
+ 
+.linea-tiempo__item::before {
+    content: "";
+    position: absolute;
+    left: -1.95rem;
+    top: 0.5rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--accent-gold);
+}
+ 
+.linea-tiempo__paso {
+    display: block;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+ 
+/* Media Queries R3 2 breakpoints uno para tablets y otro para PCs */
+
+@media (min-width: 600px) {
+    body {
+        padding: 1.5rem;
+    }
+ 
+    .encabezado,
+    .menu,
+    .principal > section,
+    .pie {
+        padding: 2rem;
+    }
+ 
+    .encabezado__titulo {
+        font-size: 2.6rem;
+    }
+ 
+    .menu__lista {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+ 
+    .pie {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+ 
+    .contactame__boton {
+        width: auto;
+        align-self: flex-start;
+    }
+ 
+    .encabezado {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: left;
+    }
+ 
+    .encabezado__foto {
+        width: 10rem;
+        height: 10rem;
+    }
+ 
+    .banner {
+        height: 12rem;
+    }
+}
+ 
+@media (min-width: 1024px) {
+    .portafolio {
+        grid-template-columns: 18rem 1fr;
+        grid-template-areas:
+            "encabezado banner"
+            "menu     principal"
+            "pie      pie";
+        align-items: start;
+    }
+ 
+    .menu {
+        position: sticky;
+        top: 1.5rem;
+    }
+ 
+    .menu__lista {
+        flex-direction: column;
+    }
+ 
+    /* La fila de arriba: encabezado y banner con la misma altura */
+    .encabezado,
+    .banner {
+        align-self: stretch;
+    }
+ 
+    .encabezado {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+ 
+    .encabezado__foto {
+        width: 9rem;
+        height: 9rem;
+    }
+ 
+    .encabezado__titulo {
+        font-size: 1.7rem;
+    }
+ 
+    .banner {
+        height: 100%;
+        min-height: 15rem;
+    }
+}
